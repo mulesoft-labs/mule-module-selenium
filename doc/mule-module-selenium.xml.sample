@@ -1,0 +1,68 @@
+<!-- BEGIN_INCLUDE(selenium:get) -->
+<selenium:get url="http://www.google.com"/>
+<!-- END_INCLUDE(selenium:get) -->
+<!-- BEGIN_INCLUDE(selenium:get-current-url) -->
+<selenium:get-current-url/>
+<!-- END_INCLUDE(selenium:get-current-url) -->
+<!-- BEGIN_INCLUDE(selenium:get-title) -->
+<selenium:get-title/>
+<!-- END_INCLUDE(selenium:get-title) -->
+<!-- BEGIN_INCLUDE(selenium:find-elements) -->
+<selenium:find-elements name="q"/>
+<!-- END_INCLUDE(selenium:find-elements) -->
+<!-- BEGIN_INCLUDE(selenium:find-element) -->
+<selenium:find-elements name="q"/>
+<!-- END_INCLUDE(selenium:find-element) -->
+<!-- BEGIN_INCLUDE(selenium:click) -->
+<selenium:click/>
+<!-- END_INCLUDE(selenium:click) -->
+<!-- BEGIN_INCLUDE(selenium:submit) -->
+<selenium:submit/>
+<!-- END_INCLUDE(selenium:submit) -->
+<!-- BEGIN_INCLUDE(selenium:send-keys) -->
+<selenium:send-keys keys="Hello World!"/>
+<!-- END_INCLUDE(selenium:send-keys) -->
+<!-- BEGIN_INCLUDE(selenium:clear) -->
+<selenium:clear/>
+<!-- END_INCLUDE(selenium:clear) -->
+<!-- BEGIN_INCLUDE(selenium:get-tag-name) -->
+<selenium:get-tag-name/>
+<!-- END_INCLUDE(selenium:get-tag-name) -->
+<!-- BEGIN_INCLUDE(selenium:get-attribute) -->
+<selenium:get-attribute name="width"/>
+<!-- END_INCLUDE(selenium:get-attribute) -->
+<!-- BEGIN_INCLUDE(selenium:is-selected) -->
+<selenium:is-selected/>
+<!-- END_INCLUDE(selenium:is-selected) -->
+<!-- BEGIN_INCLUDE(selenium:is-enabled) -->
+<selenium:is-enabled/>
+<!-- END_INCLUDE(selenium:is-enabled) -->
+<!-- BEGIN_INCLUDE(selenium:get-text) -->
+<selenium:get-text/>
+<!-- END_INCLUDE(selenium:get-text) -->
+<!-- BEGIN_INCLUDE(selenium:is-displayed) -->
+<selenium:is-displayed/>
+<!-- END_INCLUDE(selenium:is-displayed) -->
+<!-- BEGIN_INCLUDE(selenium:get-location) -->
+<selenium:get-location/>
+<!-- END_INCLUDE(selenium:get-location) -->
+<!-- BEGIN_INCLUDE(selenium:get-size) -->
+<selenium:get-size/>
+<!-- END_INCLUDE(selenium:get-size) -->
+<!-- BEGIN_INCLUDE(selenium:until) -->
+<selenium:until timeOutInSeconds="10">
+    <selenium:get-title/>
+    <script:transformer name="checkResult">
+        <script:script engine="groovy">
+            <script:text>
+			    if (payload == "cheese") {
+				    return true;
+			    } else {
+				    return false;
+			    }
+			</script:text>
+		</script:script>
+	</script:transformer>
+</selenium:until>
+<!-- END_INCLUDE(selenium:until) -->
+

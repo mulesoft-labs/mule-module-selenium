@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mule xmlns="http://www.mulesoft.org/schema/mule/core"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:spring="http://www.springframework.org/schema/beans"
+      xmlns:script="http://www.mulesoft.org/schema/mule/scripting"
+      xmlns:selenium="http://www.mulesoft.org/schema/mule/selenium"
+      xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/3.2/mule.xsd
+        http://www.mulesoft.org/schema/mule/scripting http://www.mulesoft.org/schema/mule/scripting/3.2/mule-scripting.xsd
+        http://www.mulesoft.org/schema/mule/selenium http://www.mulesoft.org/schema/mule/selenium/1.0/mule-selenium.xsd">
+
+    <selenium:config/>
+
+    <flow name="testQueryGoogle">
+        <selenium:get url="http://www.google.com"/>
+        <selenium:find-element name="q"/>
+        <selenium:send-keys keys="Cheese!"/>
+        <selenium:submit/>
+        <selenium:until timeOutInSeconds="10">
+            <selenium:get-title/>
+            <script:transformer name="checkResult">
+                <script:script engine="groovy">
+                    <script:text>
+                        if (payload.toLowerCase().startsWith("cheese!")) {
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    </script:text>
+                </script:script>
+            </script:transformer>
+        </selenium:until>
+    </flow>
+
+</mule>
