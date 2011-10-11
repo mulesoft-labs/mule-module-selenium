@@ -1,0 +1,1563 @@
+
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <meta name="description" content="Documentation for Mule Selenium Module." />
+
+<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
+<title>
+
+  SeleniumModule
+
+
+| Mule Selenium Module
+
+</title>
+<link href="../assets/mule-developer-docs.css" rel="stylesheet" type="text/css" />
+<link href="../assets/mule-developer-prettify.css" rel="stylesheet" type="text/css" />
+<link href="../assets/customizations.css" rel="stylesheet" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=Ubuntu:300' rel='stylesheet' type='text/css'>
+<script src="../assets/search_autocomplete.js" type="text/javascript"></script>
+<script src="../assets/jquery-resizable.min.js" type="text/javascript"></script>
+<script src="../assets/mule-developer-docs.js" type="text/javascript"></script>
+<script src="../assets/prettify.js" type="text/javascript"></script>
+<script type="text/javascript">
+  setToRoot("../", "../assets/");
+</script>
+<script src="../assets/customizations.js" type="text/javascript"></script>
+<noscript>
+  <style type="text/css">
+    html,body{overflow:auto;}
+    #body-content{position:relative; top:0;}
+    #doc-content{overflow:visible;border-left:3px solid #666;}
+    #side-nav{padding:0;}
+    #side-nav .toggle-list ul {display:block;}
+    #resize-packages-nav{border-bottom:3px solid #666;}
+  </style>
+</noscript>
+</head>
+
+<body class="">
+
+<div id="header">
+    <div id="headerLeft">
+    
+      <span id="masthead-title">Mule Selenium Module</span>
+    
+    <ul id="header-tabs" class="mule">
+    	<li id="guide"><a href="../guide/install.html">
+	    	<span class="en">Install Guide</span>
+    	</a></li>
+    	<li id="java"><a href="../java/packages.html">
+	    	<span class="en">Java API</span>
+    	</a></li>
+    	<li id="mule"><a href="../mule/modules.html">
+	    	<span class="en">Mule API</span>
+    	</a></li>
+    </ul>
+    </div>
+    <div id="headerRight">
+      <a href="http://www.mulesoft.com" tabindex="-1">
+      <img src="../assets//images/mulesoft-logo-final.gif" alt="MuleSoft" border="0" id="mulesoftlogo"></a><br/>
+      
+  <div id="search" >
+      <div id="searchForm">
+          <form accept-charset="utf-8" class="gsc-search-box" 
+                onsubmit="return submit_search()">
+            <table class="gsc-search-box" cellpadding="0" cellspacing="0"><tbody>
+                <tr>
+                  <td class="gsc-input">
+                    <input id="search_autocomplete" class="gsc-input" type="text" size="33" autocomplete="off"
+                      title="search developer docs" name="q"
+                      value="search developer docs"
+                      onFocus="search_focus_changed(this, true)"
+                      onBlur="search_focus_changed(this, false)"
+                      onkeydown="return search_changed(event, true, '../')"
+                      onkeyup="return search_changed(event, false, '../')" />
+                  <div id="search_filtered_div" class="no-display">
+                      <table id="search_filtered" cellspacing=0>
+                      </table>
+                  </div>
+                  </td>
+                  <td class="gsc-search-button">
+                    <input type="submit" value="Search" title="search" id="search-button" class="gsc-search-button" />
+                  </td>
+                  <td class="gsc-clear-button">
+                    <div title="clear results" class="gsc-clear-button">&nbsp;</div>
+                  </td>
+                </tr></tbody>
+              </table>
+          </form>
+      </div><!-- searchForm -->
+  </div><!-- search -->
+      
+    </div>
+</div><!-- header -->
+
+
+<div class="g-unit" id="all-content">
+
+<div id="api-info-block">
+
+<div class="sum-details-links">
+
+Summary:
+<a href="#lconfig">Configuration</a>
+
+  &#124; <a href="#promethods">Message Processors</a>
+
+
+
+</div><!-- end sum-details-links -->
+
+<div class="api-level">
+  
+
+
+  
+  
+
+</div>
+</div><!-- end api-info-block -->
+
+
+<!-- ======== START OF MODULE DATA ======== -->
+
+<div id="jd-header">
+    org.mule.modules
+<h1>mule-module-selenium</h1>
+    1.0-SNAPSHOT
+
+</div><!-- end header -->
+
+<div id="naMessage"></div>
+
+<div id="jd-content" class="api apilevel-">
+
+
+<div class="jd-tagdata">
+      <table class="jd-tagtable">
+        <tbody><tr>
+          <th>Namespace</th><td>http://www.mulesoft.org/schema/mule/selenium</td>
+        </tr><tr>
+          <th>Schema Location</th><td>http://www.mulesoft.org/schema/mule/selenium/1.0/mule-selenium.xsd</td>
+        </tr>
+<tr>
+          <th>Version</th><td>1.0</td>
+        </tr>
+<tr>
+          <th>Minimum Mule Version</th><td>3.2</td>
+        </tr>
+    </tbody></table>
+  </div>
+
+<div class="jd-descr">
+
+
+<h2>Module Overview</h2>
+<p>Selenium WebDriver is a tool for automating testing web applications, and in particular to verify that they work as
+ expected. It aims to provide a friendly API that's easy to explore and understand, which will help make your tests
+ easier to read and maintain.<br/></p>
+
+
+</div><!-- jd-descr -->
+
+
+
+
+
+
+
+
+
+
+
+<div class="jd-descr">
+
+
+<h2>Summary</h2>
+
+<!-- Config -->
+
+
+<!-- =========== CONFIG SUMMARY =========== -->
+<table id="lconfig" class="jd-sumtable"><tr><th colspan="12">Configuration</th></tr>
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../mule/selenium.html#config">&lt;selenium:config&gt;</a></nobr>
+        <div class="jd-descrdiv">Configure an instance of this module</div>
+  </td></tr>
+</table>
+
+
+
+
+<!-- ========== MESSAGE PROCESSOR SUMMARY =========== -->
+<table id="promethods" class="jd-sumtable"><tr><th colspan="12">Message Processors</th></tr>
+
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../mule/selenium.html#clear">&lt;selenium:clear&gt;</a></nobr>
+        
+        <div class="jd-descrdiv">If the element at the payload is a text entry element, this will clear the value.<br/></div>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../mule/selenium.html#click">&lt;selenium:click&gt;</a></nobr>
+        
+        <div class="jd-descrdiv">Click the element at the payload.<br/></div>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../mule/selenium.html#find-element">&lt;selenium:find-element&gt;</a></nobr>
+        
+        <div class="jd-descrdiv">Find the first <br/>WebElement using the given method.<br/></div>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../mule/selenium.html#find-elements">&lt;selenium:find-elements&gt;</a></nobr>
+        
+        <div class="jd-descrdiv">Find all elements within the current page using the given mechanism.<br/></div>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../mule/selenium.html#get">&lt;selenium:get&gt;</a></nobr>
+        
+        <div class="jd-descrdiv">Load a new web page in the current browser window.<br/></div>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../mule/selenium.html#get-attribute">&lt;selenium:get-attribute&gt;</a></nobr>
+        
+        <div class="jd-descrdiv">Get the value of a the given attribute of the element.<br/></div>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../mule/selenium.html#get-current-url">&lt;selenium:get-current-url&gt;</a></nobr>
+        
+        <div class="jd-descrdiv">Get a string representing the current URL that the browser is looking at.<br/></div>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../mule/selenium.html#get-text">&lt;selenium:get-text&gt;</a></nobr>
+        
+        <div class="jd-descrdiv">Get the visible (i.e.<br/></div>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../mule/selenium.html#get-title">&lt;selenium:get-title&gt;</a></nobr>
+        
+        <div class="jd-descrdiv">The title of the current page.<br/></div>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../mule/selenium.html#is-enabled">&lt;selenium:is-enabled&gt;</a></nobr>
+        
+        <div class="jd-descrdiv">Is the element currently enabled or not? This will generally return true for everything but
+ disabled input elements.<br/></div>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../mule/selenium.html#is-selected">&lt;selenium:is-selected&gt;</a></nobr>
+        
+        <div class="jd-descrdiv">Determine whether or not this element is selected or not.<br/></div>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../mule/selenium.html#send-keys">&lt;selenium:send-keys&gt;</a></nobr>
+        
+        <div class="jd-descrdiv">Use this method to simulate typing into an element, which may set its value.<br/></div>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../mule/selenium.html#submit">&lt;selenium:submit&gt;</a></nobr>
+        
+        <div class="jd-descrdiv">If the element at the payload is a form, or an element within a form, then this will be submitted to
+ the remote server.<br/></div>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../mule/selenium.html#until">&lt;selenium:until&gt;</a></nobr>
+        
+        <div class="jd-descrdiv">Wait until the condition is successful
+
+ <br/></div>
+        
+  </td></tr>
+
+
+
+</table>
+
+
+
+
+
+
+
+
+</div><!-- jd-descr (summary) -->
+
+
+
+<!-- ========= CONFIGURATION DETAIL ======== -->
+<A NAME="config"></A>
+<h2>Configuration</h2>
+<p>To use the this module within a flow the namespace to the module must be included. The resulting flow will look
+similar to the following:</p>
+<pre>
+&lt;mule xmlns="http://www.mulesoft.org/schema/mule/core"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:selenium="http://www.mulesoft.org/schema/mule/selenium"
+      xsi:schemaLocation="
+               http://www.mulesoft.org/schema/mule/core
+               http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+               http://www.mulesoft.org/schema/mule/selenium
+               http://www.mulesoft.org/schema/mule/selenium/1.0/mule-selenium.xsd"&gt;
+
+      &lt;!-- here goes your flows and configuration elements --&gt;
+
+&lt;/mule&gt;
+</pre>
+<p>This module is configured using the <i>config</i> element. This element must be placed outside of your flows and at
+the root of your Mule application. You can create as many configurations as you deem necesary as long as each carries
+its own name.</p>
+<p>Each message processor, message source or transformer carries a <i>config-ref</i> attribute that allows the invoker to
+specify which configuration to use.</p>
+<table id="lconfig" class="jd-sumtable">
+<tr><th colspan="12">Attributes</th></tr>
+<tr><th>Type</th><th>Name</th><th>Default Value</th><th>Description</th></tr>
+<td class="jd-typecol"><nobr>xs:string</nobr></td>
+<td class="jd-linkcol"><nobr>name</nobr></td>
+<td class="jd-descrcol"></td>
+<td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Give a name to this configuration so it can be later referenced.</td>
+
+    
+      <tr class=" api apilevel-" >
+          <td class="jd-typecol"><nobr>
+          </nobr></td>
+          <td class="jd-linkcol"><nobr>driver</nobr></td>
+          <td class="jd-descrcol">HTMLUNIT</td>
+          <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Web driver to use
+</td>
+      </tr>
+      
+    
+</table>
+
+
+
+
+
+
+
+<!-- ========= MESSAGE PROCESSOR DETAIL ======== -->
+<!-- Message Processors -->
+
+<h2>Message Processors</h2>
+
+
+
+<A NAME="clear"></A>
+
+<div class="jd-details api apilevel-">
+    <h4 class="jd-details-title">
+      <span class="sympad">&lt;selenium:clear&gt;</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>If the element at the payload is a text entry element, this will clear the value. Has no effect on other
+ elements. Text entry elements are INPUT and TEXTAREA elements.
+ <p/>
+ <br/><div class="jd-tagdata"><h5 class="jd-tagtitle">XML Sample</h5><pre>&lt;selenium:clear/&gt;</pre></div></p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Attributes</h5>
+
+      <table class="jd-tagtable">
+      <td class="jd-linkcol"><nobr>config-ref</nobr></td>
+      <td class="jd-descrcol"></td>
+      <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Specify which configuration to use.</td></tr>
+          
+          
+            
+                
+                <tr class=" api apilevel-" >
+                    <td class="jd-linkcol"><nobr>element</nobr></td>
+                    <td class="jd-descrcol"></td>
+                    <td class="jd-descrcol" width="100%">Element located at the payload of the message
+<br/></td>
+                </tr>
+                
+                
+            
+          
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Child Elements</h5>
+
+      <table class="jd-tagtable">
+          
+          
+            
+          
+      </table>
+  </div>
+  
+
+    </div>
+</div>
+
+
+<A NAME="click"></A>
+
+<div class="jd-details api apilevel-">
+    <h4 class="jd-details-title">
+      <span class="sympad">&lt;selenium:click&gt;</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Click the element at the payload. If this causes a new page to load, this method will block until the page
+ has loaded. At this point, you should discard all references to this element and any further
+ operations performed on this element will have undefined behaviour unless you know that the
+ element and the page will still be present. If click() causes a new page to be loaded via an
+ event or is done by sending a native event (which is a common case on Firefox, IE on Windows)
+ then the method will *not* wait for it to be loaded and the caller should verify that a new
+ page has been loaded.
+ <p/>
+ If this element is not clickable, then this operation is a no-op since it's pretty common for
+ someone to accidentally miss the target when clicking in Real Life
+ <p/>
+ <br/><div class="jd-tagdata"><h5 class="jd-tagtitle">XML Sample</h5><pre>&lt;selenium:click/&gt;</pre></div></p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Attributes</h5>
+
+      <table class="jd-tagtable">
+      <td class="jd-linkcol"><nobr>config-ref</nobr></td>
+      <td class="jd-descrcol"></td>
+      <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Specify which configuration to use.</td></tr>
+          
+          
+            
+                
+                <tr class=" api apilevel-" >
+                    <td class="jd-linkcol"><nobr>element</nobr></td>
+                    <td class="jd-descrcol"></td>
+                    <td class="jd-descrcol" width="100%">Element located at the payload of the message
+<br/></td>
+                </tr>
+                
+                
+            
+          
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Child Elements</h5>
+
+      <table class="jd-tagtable">
+          
+          
+            
+          
+      </table>
+  </div>
+  
+
+    </div>
+</div>
+
+
+<A NAME="find-element"></A>
+
+<div class="jd-details api apilevel-">
+    <h4 class="jd-details-title">
+      <span class="sympad">&lt;selenium:find-element&gt;</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Find the first <br/>WebElement using the given method.
+ This method is affected by the 'implicit wait' times in force at the time of execution.
+ The findElement(..) invocation will return a matching row, or try again repeatedly until
+ the configured timeout is reached.
+ <p/>
+ <br/><div class="jd-tagdata"><h5 class="jd-tagtitle">XML Sample</h5><pre>&lt;selenium:find-elements name="q"/&gt;</pre></div></p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Attributes</h5>
+
+      <table class="jd-tagtable">
+      <td class="jd-linkcol"><nobr>config-ref</nobr></td>
+      <td class="jd-descrcol"></td>
+      <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Specify which configuration to use.</td></tr>
+          
+          
+            
+                
+                <tr class=" api apilevel-" >
+                    <td class="jd-linkcol"><nobr>id</nobr></td>
+                    <td class="jd-descrcol"></td>
+                    <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>The value of the "id" attribute to search for<br/></td>
+                </tr>
+                
+                
+            
+          
+            
+                
+                <tr class="alt-color api apilevel-" >
+                    <td class="jd-linkcol"><nobr>linkText</nobr></td>
+                    <td class="jd-descrcol"></td>
+                    <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>The exact text to match against<br/></td>
+                </tr>
+                
+                
+            
+          
+            
+                
+                <tr class=" api apilevel-" >
+                    <td class="jd-linkcol"><nobr>partialLinkText</nobr></td>
+                    <td class="jd-descrcol"></td>
+                    <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>The text to match against<br/></td>
+                </tr>
+                
+                
+            
+          
+            
+                
+                <tr class="alt-color api apilevel-" >
+                    <td class="jd-linkcol"><nobr>name</nobr></td>
+                    <td class="jd-descrcol"></td>
+                    <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>The value of the "name" attribute to search for<br/></td>
+                </tr>
+                
+                
+            
+          
+            
+                
+                <tr class=" api apilevel-" >
+                    <td class="jd-linkcol"><nobr>tagName</nobr></td>
+                    <td class="jd-descrcol"></td>
+                    <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>The element's tagName<br/></td>
+                </tr>
+                
+                
+            
+          
+            
+                
+                <tr class="alt-color api apilevel-" >
+                    <td class="jd-linkcol"><nobr>xpathExpression</nobr></td>
+                    <td class="jd-descrcol"></td>
+                    <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>The xpath to use<br/></td>
+                </tr>
+                
+                
+            
+          
+            
+                
+                <tr class=" api apilevel-" >
+                    <td class="jd-linkcol"><nobr>className</nobr></td>
+                    <td class="jd-descrcol"></td>
+                    <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>The value of the "class" attribute to search for   * @return The first matching element on the current page<br/></td>
+                </tr>
+                
+                
+            
+          
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Child Elements</h5>
+
+      <table class="jd-tagtable">
+          
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+      </table>
+  </div>
+  
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Return Payload</h5>
+      <ul class="nolist"><li>A singlel <br/>WebElement, or null if nothing matches<br/></li></ul>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Exception Payload</h5>
+      <table class="jd-tagtable">
+        <tr>
+            <th>NoSuchElementException</td>
+            <td>If no matching elements are found
+<br/></td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="find-elements"></A>
+
+<div class="jd-details api apilevel-">
+    <h4 class="jd-details-title">
+      <span class="sympad">&lt;selenium:find-elements&gt;</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Find all elements within the current page using the given mechanism.
+ This method is affected by the 'implicit wait' times in force at the time of execution. When
+ implicitly waiting, this method will return as soon as there are more than 0 items in the
+ found collection, or will return an empty list if the timeout is reached.
+ <p/>
+ Only one of the attributes can be used at any given time.
+ <p/>
+ <br/><div class="jd-tagdata"><h5 class="jd-tagtitle">XML Sample</h5><pre>&lt;selenium:find-elements name="q"/&gt;</pre></div></p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Attributes</h5>
+
+      <table class="jd-tagtable">
+      <td class="jd-linkcol"><nobr>config-ref</nobr></td>
+      <td class="jd-descrcol"></td>
+      <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Specify which configuration to use.</td></tr>
+          
+          
+            
+                
+                <tr class=" api apilevel-" >
+                    <td class="jd-linkcol"><nobr>id</nobr></td>
+                    <td class="jd-descrcol"></td>
+                    <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>The value of the "id" attribute to search for<br/></td>
+                </tr>
+                
+                
+            
+          
+            
+                
+                <tr class="alt-color api apilevel-" >
+                    <td class="jd-linkcol"><nobr>linkText</nobr></td>
+                    <td class="jd-descrcol"></td>
+                    <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>The exact text to match against<br/></td>
+                </tr>
+                
+                
+            
+          
+            
+                
+                <tr class=" api apilevel-" >
+                    <td class="jd-linkcol"><nobr>partialLinkText</nobr></td>
+                    <td class="jd-descrcol"></td>
+                    <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>The text to match against<br/></td>
+                </tr>
+                
+                
+            
+          
+            
+                
+                <tr class="alt-color api apilevel-" >
+                    <td class="jd-linkcol"><nobr>name</nobr></td>
+                    <td class="jd-descrcol"></td>
+                    <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>The value of the "name" attribute to search for<br/></td>
+                </tr>
+                
+                
+            
+          
+            
+                
+                <tr class=" api apilevel-" >
+                    <td class="jd-linkcol"><nobr>tagName</nobr></td>
+                    <td class="jd-descrcol"></td>
+                    <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>The element's tagName<br/></td>
+                </tr>
+                
+                
+            
+          
+            
+                
+                <tr class="alt-color api apilevel-" >
+                    <td class="jd-linkcol"><nobr>xpathExpression</nobr></td>
+                    <td class="jd-descrcol"></td>
+                    <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>The xpath to use<br/></td>
+                </tr>
+                
+                
+            
+          
+            
+                
+                <tr class=" api apilevel-" >
+                    <td class="jd-linkcol"><nobr>className</nobr></td>
+                    <td class="jd-descrcol"></td>
+                    <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>The value of the "class" attribute to search for<br/></td>
+                </tr>
+                
+                
+            
+          
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Child Elements</h5>
+
+      <table class="jd-tagtable">
+          
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+      </table>
+  </div>
+  
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Return Payload</h5>
+      <ul class="nolist"><li>A list of all <br/>WebElements, or an empty list if nothing matches
+<br/></li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="get"></A>
+
+<div class="jd-details api apilevel-">
+    <h4 class="jd-details-title">
+      <span class="sympad">&lt;selenium:get&gt;</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Load a new web page in the current browser window. This is done using an HTTP GET operation,
+ and the method will block until the load is complete. This will follow redirects issued either
+ by the server or as a meta-redirect from within the returned HTML. Should a meta-redirect
+ "rest" for any duration of time, it is best to wait until this timeout is over, since should
+ the underlying page change whilst your test is executing the results of future calls against
+ this interface will be against the freshly loaded page. Synonym for
+ <br/><code><a href="null#to(java.lang.String)">to(String)</a></code>.
+ <p/>
+ <br/><div class="jd-tagdata"><h5 class="jd-tagtitle">XML Sample</h5><pre>&lt;selenium:get url="http://www.google.com"/&gt;</pre></div></p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Attributes</h5>
+
+      <table class="jd-tagtable">
+      <td class="jd-linkcol"><nobr>config-ref</nobr></td>
+      <td class="jd-descrcol"></td>
+      <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Specify which configuration to use.</td></tr>
+          
+          
+            
+                
+                <tr class=" api apilevel-" >
+                    <td class="jd-linkcol"><nobr>url</nobr></td>
+                    <td class="jd-descrcol"></td>
+                    <td class="jd-descrcol" width="100%">The URL to load. It is best to use a fully qualified URL
+<br/></td>
+                </tr>
+                
+                
+            
+          
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Child Elements</h5>
+
+      <table class="jd-tagtable">
+          
+          
+            
+          
+      </table>
+  </div>
+  
+
+    </div>
+</div>
+
+
+<A NAME="get-attribute"></A>
+
+<div class="jd-details api apilevel-">
+    <h4 class="jd-details-title">
+      <span class="sympad">&lt;selenium:get-attribute&gt;</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Get the value of a the given attribute of the element. Will return the current value, even if
+ this has been modified after the page has been loaded. More exactly, this method will return
+ the value of the given attribute, unless that attribute is not present, in which case the value
+ of the property with the same name is returned. If neither value is set, null is returned. The
+ "style" attribute is converted as best can be to a text representation with a trailing
+ semi-colon. The following are deemed to be "boolean" attributes, and will return either "true"
+ or "false":
+ <p/>
+ async, autofocus, autoplay, checked, compact, complete, controls, declare, defaultchecked,
+ defaultselected, defer, disabled, draggable, ended, formnovalidate, hidden, indeterminate,
+ iscontenteditable, ismap, itemscope, loop, multiple, muted, nohref, noresize, noshade,
+ novalidate, nowrap, open, paused, pubdate, readonly, required, reversed, scoped, seamless,
+ seeking, selected, spellcheck, truespeed, willvalidate
+ <p/>
+ Finally, the following commonly mis-capitalized attribute/property names are evaluated as
+ expected:
+ <p/>
+ <ul>
+ <li>"class"
+ <li>"readonly"
+ </ul>
+ <p/>
+ <br/><div class="jd-tagdata"><h5 class="jd-tagtitle">XML Sample</h5><pre>&lt;selenium:get-attribute name="width"/&gt;</pre></div></p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Attributes</h5>
+
+      <table class="jd-tagtable">
+      <td class="jd-linkcol"><nobr>config-ref</nobr></td>
+      <td class="jd-descrcol"></td>
+      <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Specify which configuration to use.</td></tr>
+          
+          
+            
+                
+                <tr class=" api apilevel-" >
+                    <td class="jd-linkcol"><nobr>element</nobr></td>
+                    <td class="jd-descrcol"></td>
+                    <td class="jd-descrcol" width="100%">Element located at the payload of the message<br/></td>
+                </tr>
+                
+                
+            
+          
+            
+                
+                <tr class="alt-color api apilevel-" >
+                    <td class="jd-linkcol"><nobr>name</nobr></td>
+                    <td class="jd-descrcol"></td>
+                    <td class="jd-descrcol" width="100%">The name of the attribute.<br/></td>
+                </tr>
+                
+                
+            
+          
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Child Elements</h5>
+
+      <table class="jd-tagtable">
+          
+          
+            
+          
+            
+          
+      </table>
+  </div>
+  
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Return Payload</h5>
+      <ul class="nolist"><li>The attribute's current value or null if the value is not set.
+<br/></li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="get-current-url"></A>
+
+<div class="jd-details api apilevel-">
+    <h4 class="jd-details-title">
+      <span class="sympad">&lt;selenium:get-current-url&gt;</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Get a string representing the current URL that the browser is looking at.
+ <p/>
+ <br/><div class="jd-tagdata"><h5 class="jd-tagtitle">XML Sample</h5><pre>&lt;selenium:get-current-url/&gt;</pre></div></p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Attributes</h5>
+
+      <table class="jd-tagtable">
+      <td class="jd-linkcol"><nobr>config-ref</nobr></td>
+      <td class="jd-descrcol"></td>
+      <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Specify which configuration to use.</td></tr>
+          
+          
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Child Elements</h5>
+
+      <table class="jd-tagtable">
+          
+          
+      </table>
+  </div>
+  
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Return Payload</h5>
+      <ul class="nolist"><li>The URL of the page currently loaded in the browser
+<br/></li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="get-text"></A>
+
+<div class="jd-details api apilevel-">
+    <h4 class="jd-details-title">
+      <span class="sympad">&lt;selenium:get-text&gt;</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Get the visible (i.e. not hidden by CSS) innerText of this element, including sub-elements,
+ without any leading or trailing whitespace.
+ <p/>
+ <br/><div class="jd-tagdata"><h5 class="jd-tagtitle">XML Sample</h5><pre>&lt;selenium:get-text/&gt;</pre></div></p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Attributes</h5>
+
+      <table class="jd-tagtable">
+      <td class="jd-linkcol"><nobr>config-ref</nobr></td>
+      <td class="jd-descrcol"></td>
+      <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Specify which configuration to use.</td></tr>
+          
+          
+            
+                
+                <tr class=" api apilevel-" >
+                    <td class="jd-linkcol"><nobr>element</nobr></td>
+                    <td class="jd-descrcol"></td>
+                    <td class="jd-descrcol" width="100%">Element located at the payload of the message<br/></td>
+                </tr>
+                
+                
+            
+          
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Child Elements</h5>
+
+      <table class="jd-tagtable">
+          
+          
+            
+          
+      </table>
+  </div>
+  
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Return Payload</h5>
+      <ul class="nolist"><li>The innerText of this element.
+<br/></li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="get-title"></A>
+
+<div class="jd-details api apilevel-">
+    <h4 class="jd-details-title">
+      <span class="sympad">&lt;selenium:get-title&gt;</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>The title of the current page.
+ <p/>
+ <br/><div class="jd-tagdata"><h5 class="jd-tagtitle">XML Sample</h5><pre>&lt;selenium:get-title/&gt;</pre></div></p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Attributes</h5>
+
+      <table class="jd-tagtable">
+      <td class="jd-linkcol"><nobr>config-ref</nobr></td>
+      <td class="jd-descrcol"></td>
+      <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Specify which configuration to use.</td></tr>
+          
+          
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Child Elements</h5>
+
+      <table class="jd-tagtable">
+          
+          
+      </table>
+  </div>
+  
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Return Payload</h5>
+      <ul class="nolist"><li>The title of the current page, with leading and trailing whitespace stripped, or null
+         if one is not already set
+<br/></li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="is-enabled"></A>
+
+<div class="jd-details api apilevel-">
+    <h4 class="jd-details-title">
+      <span class="sympad">&lt;selenium:is-enabled&gt;</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Is the element currently enabled or not? This will generally return true for everything but
+ disabled input elements.
+ <p/>
+ <br/><div class="jd-tagdata"><h5 class="jd-tagtitle">XML Sample</h5><pre>&lt;selenium:is-enabled/&gt;</pre></div></p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Attributes</h5>
+
+      <table class="jd-tagtable">
+      <td class="jd-linkcol"><nobr>config-ref</nobr></td>
+      <td class="jd-descrcol"></td>
+      <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Specify which configuration to use.</td></tr>
+          
+          
+            
+                
+                <tr class=" api apilevel-" >
+                    <td class="jd-linkcol"><nobr>element</nobr></td>
+                    <td class="jd-descrcol"></td>
+                    <td class="jd-descrcol" width="100%">Element located at the payload of the message<br/></td>
+                </tr>
+                
+                
+            
+          
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Child Elements</h5>
+
+      <table class="jd-tagtable">
+          
+          
+            
+          
+      </table>
+  </div>
+  
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Return Payload</h5>
+      <ul class="nolist"><li>True if the element is enabled, false otherwise.
+<br/></li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="is-selected"></A>
+
+<div class="jd-details api apilevel-">
+    <h4 class="jd-details-title">
+      <span class="sympad">&lt;selenium:is-selected&gt;</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Determine whether or not this element is selected or not. This operation only applies to input
+ elements such as checkboxes, options in a select and radio buttons.
+ <p/>
+ <br/><div class="jd-tagdata"><h5 class="jd-tagtitle">XML Sample</h5><pre>&lt;selenium:is-selected/&gt;</pre></div></p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Attributes</h5>
+
+      <table class="jd-tagtable">
+      <td class="jd-linkcol"><nobr>config-ref</nobr></td>
+      <td class="jd-descrcol"></td>
+      <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Specify which configuration to use.</td></tr>
+          
+          
+            
+                
+                <tr class=" api apilevel-" >
+                    <td class="jd-linkcol"><nobr>element</nobr></td>
+                    <td class="jd-descrcol"></td>
+                    <td class="jd-descrcol" width="100%">Element located at the payload of the message<br/></td>
+                </tr>
+                
+                
+            
+          
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Child Elements</h5>
+
+      <table class="jd-tagtable">
+          
+          
+            
+          
+      </table>
+  </div>
+  
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Return Payload</h5>
+      <ul class="nolist"><li>True if the element is currently selected or checked, false otherwise.
+<br/></li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="send-keys"></A>
+
+<div class="jd-details api apilevel-">
+    <h4 class="jd-details-title">
+      <span class="sympad">&lt;selenium:send-keys&gt;</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Use this method to simulate typing into an element, which may set its value. The payload
+ must be of type <br/>WebElement
+ <p/>
+ <br/><div class="jd-tagdata"><h5 class="jd-tagtitle">XML Sample</h5><pre>&lt;selenium:send-keys keys="Hello World!"/&gt;</pre></div></p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Attributes</h5>
+
+      <table class="jd-tagtable">
+      <td class="jd-linkcol"><nobr>config-ref</nobr></td>
+      <td class="jd-descrcol"></td>
+      <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Specify which configuration to use.</td></tr>
+          
+          
+            
+                
+                <tr class=" api apilevel-" >
+                    <td class="jd-linkcol"><nobr>element</nobr></td>
+                    <td class="jd-descrcol"></td>
+                    <td class="jd-descrcol" width="100%">Element located at the payload of the message<br/></td>
+                </tr>
+                
+                
+            
+          
+            
+                
+                <tr class="alt-color api apilevel-" >
+                    <td class="jd-linkcol"><nobr>keys</nobr></td>
+                    <td class="jd-descrcol"></td>
+                    <td class="jd-descrcol" width="100%">Keys to send
+<br/></td>
+                </tr>
+                
+                
+            
+          
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Child Elements</h5>
+
+      <table class="jd-tagtable">
+          
+          
+            
+          
+            
+          
+      </table>
+  </div>
+  
+
+    </div>
+</div>
+
+
+<A NAME="submit"></A>
+
+<div class="jd-details api apilevel-">
+    <h4 class="jd-details-title">
+      <span class="sympad">&lt;selenium:submit&gt;</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>If the element at the payload is a form, or an element within a form, then this will be submitted to
+ the remote server. If this causes the current page to change, then this method will block until
+ the new page is loaded.
+ <p/>
+ <br/><div class="jd-tagdata"><h5 class="jd-tagtitle">XML Sample</h5><pre>&lt;selenium:submit/&gt;</pre></div></p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Attributes</h5>
+
+      <table class="jd-tagtable">
+      <td class="jd-linkcol"><nobr>config-ref</nobr></td>
+      <td class="jd-descrcol"></td>
+      <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Specify which configuration to use.</td></tr>
+          
+          
+            
+                
+                <tr class=" api apilevel-" >
+                    <td class="jd-linkcol"><nobr>element</nobr></td>
+                    <td class="jd-descrcol"></td>
+                    <td class="jd-descrcol" width="100%">Element located at the payload of the message<br/></td>
+                </tr>
+                
+                
+            
+          
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Child Elements</h5>
+
+      <table class="jd-tagtable">
+          
+          
+            
+          
+      </table>
+  </div>
+  
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Exception Payload</h5>
+      <table class="jd-tagtable">
+        <tr>
+            <th></td>
+            <td>java.util.NoSuchElementException} If the given element is not within a form
+<br/></td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="until"></A>
+
+<div class="jd-details api apilevel-">
+    <h4 class="jd-details-title">
+      <span class="sympad">&lt;selenium:until&gt;</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Wait until the condition is successful
+
+ <br/><div class="jd-tagdata"><h5 class="jd-tagtitle">XML Sample</h5><pre>&lt;selenium:until timeOutInSeconds="10"&gt;
+    &lt;selenium:get-title/&gt;
+    &lt;script:transformer name="checkResult"&gt;
+        &lt;script:script engine="groovy"&gt;
+            &lt;script:text&gt;
+			    if (payload == "cheese") {
+				    return true;
+			    } else {
+				    return false;
+			    }
+			&lt;/script:text&gt;
+		&lt;/script:script&gt;
+	&lt;/script:transformer&gt;
+&lt;/selenium:until&gt;</pre></div></p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Attributes</h5>
+
+      <table class="jd-tagtable">
+      <td class="jd-linkcol"><nobr>config-ref</nobr></td>
+      <td class="jd-descrcol"></td>
+      <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Specify which configuration to use.</td></tr>
+          
+          
+            
+                
+                <tr class=" api apilevel-" >
+                    <td class="jd-linkcol"><nobr>timeOutInSeconds</nobr></td>
+                    <td class="jd-descrcol"></td>
+                    <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>The timeout in seconds when an expectation is called<br/></td>
+                </tr>
+                
+                
+            
+          
+            
+                
+            
+          
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Child Elements</h5>
+
+      <table class="jd-tagtable">
+          
+          
+            
+          
+            
+            <tr class=" api apilevel-" >
+                <td class="jd-linkcol"><nobr>conditional</nobr></td>
+                <td class="jd-descrcol"></td>
+                <td class="jd-descrcol" width="100%">Nested processor to be executed for evaluating conditions
+<br/></td>
+            </tr>
+            
+            
+          
+      </table>
+  </div>
+  
+
+    </div>
+</div>
+
+
+
+
+
+<!-- ========= MESSAGE SOURCES DETAIL ======== -->
+<!-- Message Processors -->
+
+
+
+
+<!-- ========= END OF CLASS DATA ========= -->
+<A NAME="navbar_top"></A>
+
+<div id="footer">
+Generated by <a href="http://www.mulesoft.com/devkit">Mule DevKit</a>. Document generation technology based on <a href="http://code.google.com/p/doclava/">Google's Doclava</a>.
+</div> <!-- end footer -->
+
+</div> <!-- jd-content -->
+
+</div><!-- end doc-content -->
+
+</div> <!-- end body-content --> 
+
+<script type="text/javascript">
+init(); /* initialize mule-developer-docs.js */
+</script>
+
+</body>
+</html>
