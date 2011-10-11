@@ -218,12 +218,12 @@
     </pluginRepositories>
 
     <scm>
-        <connection>scm:git:git://github.com:mulesoft/mule-module-twiml.git
+        <connection>scm:git:git://github.com:mulesoft/mule-module-selenium.git
         </connection>
         <developerConnection>
-            scm:git:git@github.com:mulesoft/mule-module-twiml.git
+            scm:git:git@github.com:mulesoft/mule-module-selenium.git
         </developerConnection>
-        <url>http://github.com/mulesoft/mule-module-twiml</url>
+        <url>http://github.com/mulesoft/mule-module-selenium</url>
     </scm>
 
     <distributionManagement>
