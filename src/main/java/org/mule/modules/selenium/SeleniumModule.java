@@ -1,3 +1,12 @@
+/**
+ Mule Selenium Module
+
+ Copyright (c) MuleSoft, Inc.  All rights reserved.  http://www.mulesoft.com
+
+ The software in this package is published under the terms of the CPAL v1.0
+ license, a copy of which has been included with this distribution in the
+ LICENSE.txt file.
+ */
 package org.mule.modules.selenium;
 
 import org.mule.api.NestedProcessor;
@@ -403,11 +412,11 @@ public class SeleniumModule {
 
     /**
      * Wait until the condition is successful
-     *
+     * <p/>
      * {@sample.xml ../../../doc/mule-module-selenium.xml.sample selenium:until}
      *
      * @param timeOutInSeconds The timeout in seconds when an expectation is called
-     * @param conditional Nested processor to be executed for evaluating conditions
+     * @param conditional      Nested processor to be executed for evaluating conditions
      */
     @Processor
     public void until(@Optional @Default("10") long timeOutInSeconds,
